@@ -41,7 +41,8 @@ git clone https://gitlab.com/rik-x777/packages_apps_ViPER4AndroidFX packages/app
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera; \
 
 rm -rf vendor/lineage-priv/keys && rm -rf vendor/infinity-priv/keys; \
-
+rm -rf vendor/qcom/opensource/dataservices; \
+git clone https://github.com/olzhas0986dev/vendor_qcom_opensource_dataservices.git vendor/qcom/opensource/dataservices; \
 # Build
 . build/envsetup.sh; \
 
