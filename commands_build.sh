@@ -44,6 +44,8 @@ git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendo
 rm -rf vendor/lineage-priv/keys && rm -rf vendor/infinity-priv/keys; \
 rm -rf vendor/qcom/opensource/dataservices; \
 git clone https://github.com/olzhas0986dev/vendor_qcom_opensource_dataservices.git vendor/qcom/opensource/dataservices; \
+rm -rf hardware/google/pixel; \
+git clone https://github.com/olzhas0986dev/android_hardware_google_pixel.git hardware/google/pixel; \
 
 # Build
 . build/envsetup.sh; \
