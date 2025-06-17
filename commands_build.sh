@@ -33,7 +33,7 @@ git clone https://github.com/munch-devs/android_vendor_xiaomi_munch.git vendor/x
 #git clone https://github.com/olzhas0986dev/vendor_xiaomi_munch-firmware.git vendor/xiaomi/munch-firmware; \
 
 # Kernel Tree
-git clone https://github.com/olzhas0986dev/kernel_xiaomi_sm8250.git -b kernel/xiaomi/sm8250; \
+git clone https://github.com/olzhas0986dev/kernel_xiaomi_sm8250.git -b kernel/xiaomi/munch; \
 
 # KernelSU-Next
 cd kernel/xiaomi/sm8250 && git submodule init && git submodule update && rm -rf KernelSU-Next/userspace/su && cd ../../..; \
