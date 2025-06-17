@@ -2,8 +2,8 @@
 rm -rf .repo/local_manifests; \
 
 # Repo Init
-#repo init -u https://github.com/SuperiorOS/manifest.git -b fifteen-los -m stable/latest.xml --git-lfs; \
-repo init -u https://github.com/Evolution-X/manifest -b bka --git-lfs; \
+repo init -u https://github.com/SuperiorOS/manifest.git -b fifteen-los -m stable/latest.xml --git-lfs; \
+#repo init -u https://github.com/Evolution-X/manifest -b bka --git-lfs; \
 
 # repo sync
 /opt/crave/resync.sh; \
@@ -22,24 +22,24 @@ rm -rf packages/resources/devicesettings; \
 rm -rf packages/apps/ViPER4AndroidFX; \
 
 # Device Trees
-git clone https://github.com/olzhas0986dev/device_xiaomi_munch.git device/xiaomi/munch; \
-git clone https://github.com/olzhas0986dev/device_xiaomi_sm8250-common.git device/xiaomi/sm8250-common; \
+git clone https://github.com/olzhas0986dev/android_device_xiaomi_munch.git device/xiaomi/munch; \
+#git clone  device/xiaomi/sm8250-common; \
 
 # Vendor Trees
-git clone https://github.com/olzhas0986dev/vendor_xiaomi_munch.git vendor/xiaomi/munch; \
-git clone https://github.com/olzhas0986dev/vendor_xiaomi_sm8250-common.git vendor/xiaomi/sm8250-common; \
+git clone https://github.com/munch-devs/android_vendor_xiaomi_munch.git vendor/xiaomi/munch; \
+#git clone  vendor/xiaomi/sm8250-common; \
 
 # Munch Firmware
-git clone https://github.com/olzhas0986dev/vendor_xiaomi_munch-firmware.git vendor/xiaomi/munch-firmware; \
+#git clone https://github.com/olzhas0986dev/vendor_xiaomi_munch-firmware.git vendor/xiaomi/munch-firmware; \
 
 # Kernel Tree
-git clone https://github.com/olzhas0986dev/kernel_xiaomi_sm8250.git -b bpf kernel/xiaomi/sm8250; \
+git clone https://github.com/olzhas0986dev/kernel_xiaomi_sm8250.git -b kernel/xiaomi/sm8250; \
 
 # KernelSU-Next
 cd kernel/xiaomi/sm8250 && git submodule init && git submodule update && rm -rf KernelSU-Next/userspace/su && cd ../../..; \
 
 # Hardware
-git clone https://github.com/Evolution-X-Devices/hardware_xiaomi hardware/xiaomi; \
+git clone https://github.com/munch-devs/android_hardware_xiaomi.git hardware/xiaomi; \
 
 # DeviceSettings
 git clone https://github.com/PocoF3Releases/packages_resources_devicesettings packages/resources/devicesettings; \
@@ -50,15 +50,8 @@ git clone https://github.com/PocoF3Releases/packages_resources_devicesettings pa
 # MIUI Camera
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera; \
 
-# EvoX moment
-rm -rf vendor/lineage-priv/keys && rm -rf vendor/infinity-priv/keys; \
-rm -rf vendor/qcom/opensource/dataservices; \
-git clone https://github.com/olzhas0986dev/vendor_qcom_opensource_dataservices.git vendor/qcom/opensource/dataservices; \
-rm -rf hardware/google/pixel; \
-git clone https://github.com/olzhas0986dev/android_hardware_google_pixel.git hardware/google/pixel; \
-
 # Build
 . build/envsetup.sh; \
-#breakfast munch; \
-#m superior
-lunch lineage_munch-bp2a-user && m evolution
+breakfast munch; \
+m superior
+#lunch lineage_munch-bp2a-user && m evolution
