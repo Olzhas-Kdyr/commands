@@ -2,8 +2,8 @@
 rm -rf .repo/local_manifests; \
 
 # Repo Init
-repo init -u https://github.com/SuperiorOS/manifest.git -b fifteen-los -m stable/latest.xml --git-lfs; \
-#repo init -u https://github.com/Evolution-X/manifest -b bka --git-lfs; \
+#repo init -u https://github.com/SuperiorOS/manifest.git -b fifteen-los -m stable/latest.xml --git-lfs; \
+repo init -u https://github.com/Evolution-X/manifest -b bka --git-lfs; \
 
 # repo sync
 /opt/crave/resync.sh; \
@@ -28,10 +28,10 @@ git clone https://github.com/olzhas0986dev/android_device_xiaomi_munch.git devic
 git clone https://github.com/munch-devs/android_vendor_xiaomi_munch.git vendor/xiaomi/munch; \
 
 # Munch Firmware
-git clone https://github.com/olzhas0986dev/vendor_xiaomi_munch-firmware.git vendor/xiaomi/munch-firmware; \
+#git clone https://github.com/olzhas0986dev/vendor_xiaomi_munch-firmware.git vendor/xiaomi/munch-firmware; \
 
 # Kernel Tree
-git clone https://github.com/olzhas0986dev/kernel_xiaomi_sm8250.git kernel/xiaomi/munch; \
+git clone https://github.com/olzhas0986dev/kernel_xiaomi_sm8250.git -b bpf kernel/xiaomi/munch; \
 
 # Hardware Xiaomi
 git clone https://github.com/munch-devs/android_hardware_xiaomi.git hardware/xiaomi; \
@@ -50,5 +50,6 @@ git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendo
 
 # Build
 . build/envsetup.sh; \
-breakfast munch; \
-m superior
+#breakfast munch; \
+#m superior
+lunch lineage_munch-bp2a-user && m evolution; \ 
