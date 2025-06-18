@@ -36,6 +36,9 @@ git clone https://github.com/olzhas0986dev/kernel_xiaomi_sm8250.git kernel/xiaom
 # Hardware Xiaomi
 git clone https://github.com/munch-devs/android_hardware_xiaomi.git hardware/xiaomi; \
 
+# Hardware Dolby
+git clone https://github.com/munch-devs/android_hardware_dolby.git hardware/dolby; \
+
 # DeviceSettings
 git clone https://github.com/PocoF3Releases/packages_resources_devicesettings packages/resources/devicesettings; \
 
