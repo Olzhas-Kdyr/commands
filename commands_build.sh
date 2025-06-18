@@ -21,14 +21,11 @@ rm -rf vendor/xiaomi/miuicamera; \
 rm -rf packages/resources/devicesettings; \
 rm -rf packages/apps/ViPER4AndroidFX; \
 
-# Device Trees
+# Device Tree
 git clone https://github.com/olzhas0986dev/android_device_xiaomi_munch.git device/xiaomi/munch; \
 
-# Vendor Trees
-git clone https://github.com/munch-devs/android_vendor_xiaomi_munch.git vendor/xiaomi/munch; \
-
-# Munch Firmware
-#git clone https://github.com/olzhas0986dev/vendor_xiaomi_munch-firmware.git vendor/xiaomi/munch-firmware; \
+# Vendor Tree
+git clone https://github.com/olzhas0986dev/android_vendor_xiaomi_munch.git vendor/xiaomi/munch; \
 
 # Kernel Tree
 git clone https://github.com/olzhas0986dev/kernel_xiaomi_sm8250.git -b bpf kernel/xiaomi/munch; \
@@ -49,7 +46,7 @@ git clone https://github.com/olzhas0986dev/ViPER4AndroidFX.git packages/apps/ViP
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera; \
 
 rm -rf hardware/google/pixel; \
-git clone https://github.com/rik-x777/android_hardware_google_pixel hardware/google/pixel; \
+git clone https://github.com/olzhas0986dev/android_hardware_google_pixel hardware/google/pixel; \
 
 rm -rf vendor/qcom/opensource/dataservices; \
 git clone https://github.com/Evolution-X/vendor_qcom_opensource_dataservices vendor/qcom/opensource/dataservices; \
