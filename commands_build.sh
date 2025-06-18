@@ -48,6 +48,12 @@ git clone https://github.com/olzhas0986dev/ViPER4AndroidFX.git packages/apps/ViP
 # MIUI Camera
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera; \
 
+rm -rf hardware/google/pixel; \
+git clone https://github.com/rik-x777/android_hardware_google_pixel hardware/google/pixel; \
+
+rm -rf vendor/qcom/opensource/dataservices; \
+git clone https://github.com/Evolution-X/vendor_qcom_opensource_dataservices vendor/qcom/opensource/dataservices; \
+
 # Build
 . build/envsetup.sh; \
 #breakfast munch; \
