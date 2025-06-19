@@ -2,7 +2,6 @@
 rm -rf .repo/local_manifests; \
 
 # Repo Init
-#repo init -u https://github.com/SuperiorOS/manifest.git -b fifteen-los -m stable/latest.xml --git-lfs; \
 repo init -u https://github.com/Evolution-X/manifest -b bka --git-lfs; \
 
 # repo sync
@@ -11,12 +10,10 @@ repo init -u https://github.com/Evolution-X/manifest -b bka --git-lfs; \
 # rm -rf old repos
 rm -rf out/target/product/munch; \
 rm -rf device/xiaomi/munch; \
-rm -rf device/xiaomi/sm8250-common; \
-rm -rf kernel/xiaomi/sm8250; \
+rm -rf kernel/xiaomi/munch; \
 rm -rf vendor/xiaomi/munch; \
-rm -rf vendor/xiaomi/sm8250-common; \
 rm -rf hardware/xiaomi; \
-rm -rf vendor/xiaomi/munch-firmware; \
+rm -rf hardware/dolby; \
 rm -rf vendor/xiaomi/miuicamera; \
 rm -rf packages/resources/devicesettings; \
 rm -rf packages/apps/ViPER4AndroidFX; \
@@ -45,6 +42,7 @@ git clone https://github.com/olzhas0986dev/ViPER4AndroidFX.git packages/apps/ViP
 # MIUI Camera
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera; \
 
+# Evox stuffs
 rm -rf hardware/google/pixel; \
 git clone https://github.com/olzhas0986dev/android_hardware_google_pixel hardware/google/pixel; \
 
@@ -53,6 +51,4 @@ git clone https://github.com/Evolution-X/vendor_qcom_opensource_dataservices ven
 
 # Build
 . build/envsetup.sh; \
-#breakfast munch; \
-#m superior
 lunch lineage_munch-bp2a-user && m evolution; \ 
