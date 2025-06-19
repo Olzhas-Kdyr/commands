@@ -31,7 +31,7 @@ git clone https://github.com/munch-devs/android_vendor_xiaomi_munch.git vendor/x
 git clone https://github.com/olzhas0986dev/vendor_xiaomi_munch-firmware.git vendor/xiaomi/munch-firmware; \
 
 # Kernel Tree
-git clone https://github.com/olzhas0986dev/kernel_xiaomi_sm8250.git kernel/xiaomi/munch; \
+git clone https://github.com/Olzhas-Kdyr/xiaomi_kernel_sm8250.git -b bpf kernel/xiaomi/munch; \
 
 # Hardware Xiaomi
 git clone https://github.com/munch-devs/android_hardware_xiaomi.git hardware/xiaomi; \
