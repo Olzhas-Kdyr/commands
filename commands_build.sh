@@ -31,7 +31,7 @@ git clone https://github.com/olzhas0986dev/android_vendor_xiaomi_munch.git vendo
 git clone https://github.com/olzhas0986dev/kernel_xiaomi_sm8250.git -b bpf kernel/xiaomi/munch; \
 
 # Hardware Xiaomi
-git clone https://github.com/munch-devs/android_hardware_xiaomi.git hardware/xiaomi; \
+git clone https://github.com/olzhas0986dev/android_hardware_xiaomi.git hardware/xiaomi; \
 
 # Hardware Dolby
 git clone https://github.com/munch-devs/android_hardware_dolby.git hardware/dolby; \
