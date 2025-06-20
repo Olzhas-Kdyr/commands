@@ -2,7 +2,7 @@
 rm -rf .repo/local_manifests; \
 
 # Repo Init
-#repo init -u https://github.com/Evolution-X/manifest -b bka --git-lfs; \
+repo init -u https://github.com/RisingOS-Revived/android -b qpr2 --git-lfs; \
 
 # repo sync
 /opt/crave/resync.sh; \
@@ -27,9 +27,6 @@ git clone https://github.com/Olzhas-Kdyr/los_device_xiaomi_sm8250-common.git dev
 # Vendor Trees
 git clone https://gitlab.com/rik-x777/vendor_xiaomi_munch vendor/xiaomi/munch; \
 git clone https://gitlab.com/rik-x777/vendor_xiaomi_sm8250-common vendor/xiaomi/sm8250-common; \
-
-# Munch Firmware
-#git clone https://github.com/olzhas0986dev/vendor_xiaomi_munch-firmware.git vendor/xiaomi/munch-firmware; \
 
 # Kernel Tree
 git clone https://github.com/munch-devs/kernel_xiaomi_munch.git -b ksu-susfs kernel/xiaomi/sm8250; \
