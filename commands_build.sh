@@ -3,7 +3,8 @@ rm -rf .repo/local_manifests; \
 
 # Repo Init
 #repo init -u https://github.com/RisingOS-Revived/android -b qpr2 --git-lfs; \
-repo init -u https://github.com/ProjectMatrixx/android.git -b 15.0 --git-lfs; \
+#repo init -u https://github.com/ProjectMatrixx/android.git -b 15.0 --git-lfs; \
+repo init -u https://github.com/PixelOS-AOSP/manifest.git -b fifteen --git-lfs; \
 
 # repo sync
 /opt/crave/resync.sh; \
@@ -49,4 +50,5 @@ git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendo
 
 # Build 
 . build/envsetup.sh; \
-brunch munch
+lunch aosp_munch-bp1a-user
+mka bacon
