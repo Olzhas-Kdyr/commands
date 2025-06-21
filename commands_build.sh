@@ -38,7 +38,7 @@ git clone https://github.com/Olzhas-Kdyr/xiaomi_kernel_sm8250.git -b bpf kernel/
 cd kernel/xiaomi/sm8250 && git submodule init && git submodule update && rm -rf KernelSU-Next/userspace/su && cd ../../..; \
 
 # Hardware
-git clone https://github.com/LineageOS/android_hardware_xiaomi hardware/xiaomi; \
+git clone https://github.com/Olzhas-Kdyr/los_android_hardware_xiaomi.git hardware/xiaomi; \
 
 # DeviceSettings
 git clone https://github.com/PocoF3Releases/packages_resources_devicesettings packages/resources/devicesettings; \
