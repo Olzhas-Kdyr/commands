@@ -4,7 +4,8 @@ rm -rf .repo/local_manifests; \
 # Repo Init
 #repo init -u https://github.com/RisingOS-Revived/android -b qpr2 --git-lfs; \
 #repo init -u https://github.com/ProjectMatrixx/android.git -b 15.0 --git-lfs; \
-repo init -u https://github.com/PixelOS-AOSP/manifest.git -b fifteen --git-lfs; \
+#repo init -u https://github.com/PixelOS-AOSP/manifest.git -b fifteen --git-lfs; \
+repo init -u https://github.com/CherishOS/android_manifest.git -b sixteen; \
 
 # repo sync
 /opt/crave/resync.sh; \
@@ -31,7 +32,7 @@ git clone https://gitlab.com/rik-x777/vendor_xiaomi_munch vendor/xiaomi/munch; \
 git clone https://gitlab.com/rik-x777/vendor_xiaomi_sm8250-common vendor/xiaomi/sm8250-common; \
 
 # Kernel Tree
-git clone https://github.com/munch-devs/kernel_xiaomi_munch.git -b ksu-susfs kernel/xiaomi/sm8250; \
+git clone https://github.com/Olzhas-Kdyr/xiaomi_kernel_sm8250.git -b bpf kernel/xiaomi/sm8250; \
 
 # KernelSU-Next
 cd kernel/xiaomi/sm8250 && git submodule init && git submodule update && rm -rf KernelSU-Next/userspace/su && cd ../../..; \
@@ -50,5 +51,4 @@ git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendo
 
 # Build 
 . build/envsetup.sh; \
-lunch aosp_munch-bp1a-user
-mka bacon
+brunch munch
