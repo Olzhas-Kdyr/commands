@@ -4,8 +4,8 @@ rm -rf .repo/local_manifests; \
 # Repo Init
 #repo init -u https://github.com/RisingOS-Revived/android -b qpr2 --git-lfs; \
 #repo init -u https://github.com/ProjectMatrixx/android.git -b 15.0 --git-lfs; \
-#repo init -u https://github.com/PixelOS-AOSP/manifest.git -b fifteen --git-lfs; \
-repo init -u https://github.com/aosp-mirror/platform_manifest.git -b android-latest-release; \
+repo init -u https://github.com/PixelOS-AOSP/manifest.git -b sixteen --git-lfs; \
+#repo init -u https://github.com/aosp-mirror/platform_manifest.git -b android-latest-release; \
 
 # repo sync
 /opt/crave/resync.sh; \
