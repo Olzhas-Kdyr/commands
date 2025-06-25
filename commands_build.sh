@@ -50,6 +50,9 @@ git clone https://gitlab.com/rik-x777/packages_apps_ViPER4AndroidFX packages/app
 # MIUI Camera
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera; \
 
+rm -rf device/qcom/common; \
+git clone https://github.com/Olzhas-Kdyr/device_qcom_common.git -b fifteen device/qcom/common; \
+
 # Build 
 . build/envsetup.sh; \
 lunch yaap_munch-user && m yaap
