@@ -52,6 +52,8 @@ git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendo
 
 rm -rf device/qcom/common; \
 git clone https://github.com/Olzhas-Kdyr/device_qcom_common.git -b fifteen device/qcom/common; \
+rm -rf vendor/yaap; \
+git clone https://github.com/Olzhas-Kdyr/vendor_yaap.git -b fifteen vendor/yaap; \
 
 # Build 
 . build/envsetup.sh; \
