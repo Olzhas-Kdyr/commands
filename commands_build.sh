@@ -2,8 +2,9 @@
 rm -rf .repo/local_manifests; \
 
 # Repo Init
-repo init -u https://github.com/SuperiorOS/manifest.git -b fifteen-los -m stable/latest.xml --git-lfs; \
+#repo init -u https://github.com/SuperiorOS/manifest.git -b fifteen-los -m stable/latest.xml --git-lfs; \
 #repo init -u https://github.com/Evolution-X/manifest -b bka --git-lfs; \
+repo init -u https://github.com/RisingOS-Revived/android -b qpr2 --git-lfs; \
 
 # repo sync
 /opt/crave/resync.sh; \
@@ -13,6 +14,7 @@ rm -rf out/target/product/munch; \
 rm -rf device/xiaomi/munch; \
 rm -rf device/xiaomi/sm8250-common; \
 rm -rf kernel/xiaomi/sm8250; \
+rm -rf kernel/xiaomi/munch; \
 rm -rf vendor/xiaomi/munch; \
 rm -rf vendor/xiaomi/sm8250-common; \
 rm -rf hardware/xiaomi; \
@@ -28,10 +30,10 @@ git clone https://github.com/olzhas0986dev/android_device_xiaomi_munch.git devic
 git clone https://github.com/munch-devs/android_vendor_xiaomi_munch.git vendor/xiaomi/munch; \
 
 # Munch Firmware
-git clone https://github.com/olzhas0986dev/vendor_xiaomi_munch-firmware.git vendor/xiaomi/munch-firmware; \
+#git clone https://github.com/olzhas0986dev/vendor_xiaomi_munch-firmware.git vendor/xiaomi/munch-firmware; \
 
 # Kernel Tree
-git clone https://github.com/Olzhas-Kdyr/xiaomi_kernel_sm8250.git -b bpf kernel/xiaomi/munch; \
+git clone https://github.com/munch-devs/kernel_xiaomi_munch.git -b munch-ksu-susfs kernel/xiaomi/munch; \
 
 # Hardware Xiaomi
 git clone https://github.com/munch-devs/android_hardware_xiaomi.git hardware/xiaomi; \
@@ -43,12 +45,13 @@ git clone https://github.com/munch-devs/android_hardware_dolby.git hardware/dolb
 git clone https://github.com/PocoF3Releases/packages_resources_devicesettings packages/resources/devicesettings; \
 
 # ViPER4AndroidFX
-git clone https://github.com/olzhas0986dev/ViPER4AndroidFX.git packages/apps/ViPER4AndroidFX; \
+#git clone https://github.com/olzhas0986dev/ViPER4AndroidFX.git packages/apps/ViPER4AndroidFX; \
 
 # MIUI Camera
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera; \
 
 # Build
 . build/envsetup.sh; \
-breakfast munch; \
-m superior
+#breakfast munch; \
+#m superior
+riseup munch user && rise b
