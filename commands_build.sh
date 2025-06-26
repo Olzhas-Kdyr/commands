@@ -17,6 +17,7 @@ rm -rf device/xiaomi/munch; \
 rm -rf kernel/xiaomi/munch; \
 rm -rf vendor/xiaomi/munch; \
 rm -rf hardware/xiaomi; \
+rm -rf hardware/dolby; \
 rm -rf vendor/xiaomi/miuicamera; \
 rm -rf packages/resources/devicesettings; \
 
@@ -52,4 +53,5 @@ git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendo
 
 . build/envsetup.sh; \
 riseup munch user && rise b
+
 # End
