@@ -36,7 +36,7 @@ git clone https://github.com/munch-devs/android_vendor_xiaomi_munch.git vendor/x
 git clone https://github.com/munch-devs/kernel_xiaomi_munch.git -b munch-ksu-susfs kernel/xiaomi/munch; \
 
 # Hardware Xiaomi
-git clone https://github.com/munch-devs/android_hardware_xiaomi.git hardware/xiaomi; \
+git clone https://github.com/Olzhas-Kdyr/android_hardware_xiaomii.git hardware/xiaomi; \
 
 # Hardware Dolby
 git clone https://github.com/munch-devs/android_hardware_dolby.git hardware/dolby; \
