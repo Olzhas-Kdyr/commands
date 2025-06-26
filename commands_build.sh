@@ -4,7 +4,7 @@ rm -rf .repo/local_manifests; \
 
 # Repo Init
 
-repo init -u https://github.com/RisingOS-Revived/android -b qpr2 --git-lfs; \
+repo init -u https://github.com/VoltageOS-staging/manifest.git -b 16 --git-lfs; \
 
 # repo sync
 
@@ -23,7 +23,7 @@ rm -rf packages/resources/devicesettings; \
 
 # Device Tree
 
-git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch.git device/xiaomi/munch; \
+git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch.git -b vol device/xiaomi/munch; \
 
 # Vendor Tree
 
@@ -31,7 +31,7 @@ git clone https://github.com/munch-devs/android_vendor_xiaomi_munch.git vendor/x
 
 # Kernel Tree
 
-git clone https://github.com/munch-devs/kernel_xiaomi_munch.git -b munch-ksu-susfs kernel/xiaomi/munch; \
+git clone https://github.com/Olzhas-Kdyr/xiaomi_kernel_sm8250.git -b bpf kernel/xiaomi/munch; \
 
 # Hardware Xiaomi
 
@@ -52,6 +52,4 @@ git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendo
 # Build
 
 . build/envsetup.sh; \
-riseup munch user && rise b
-
-# End
+brunch munch
