@@ -23,7 +23,7 @@ rm -rf packages/resources/devicesettings; \
 
 # Device Tree
 
-git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch.git -b vol device/xiaomi/munch; \
+git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch.git -b voltage-16 device/xiaomi/munch; \
 
 # Vendor Tree
 
