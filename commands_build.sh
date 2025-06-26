@@ -27,7 +27,7 @@ git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch.git -b vol 
 
 # Vendor Tree
 
-git clone https://github.com/munch-devs/android_vendor_xiaomi_munch.git vendor/xiaomi/munch; \
+git clone https://github.com/Olzhas-Kdyr/android_vendor_xiaomi_munch.git vendor/xiaomi/munch; \
 
 # Kernel Tree
 
