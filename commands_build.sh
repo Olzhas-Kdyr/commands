@@ -51,5 +51,8 @@ git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendo
 
 # Build
 
+rm -rf build/soong; \
+git clone https://github.com/Olzhas-Kdyr/build_soong.git build/soong; \
+
 . build/envsetup.sh; \
 brunch munch
