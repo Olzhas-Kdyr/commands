@@ -5,6 +5,7 @@ rm -rf .repo/local_manifests; \
 # Repo Init
 
 repo init -u https://github.com/VoltageOS-staging/manifest.git -b 16 --git-lfs; \
+#repo init -u https://github.com/GrapheneOS/platform_manifest.git -b 16 --git-lfs; \
 
 # repo sync
 
