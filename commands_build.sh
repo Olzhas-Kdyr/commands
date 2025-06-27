@@ -4,7 +4,8 @@ rm -rf .repo/local_manifests; \
 
 # Repo Init
 
-repo init -u https://github.com/VoltageOS-staging/manifest.git -b 16 --git-lfs; \
+repo init -u https://github.com/LineageOS/android.git -b lineage-22.3 --git-lfs; \
+#repo init -u https://github.com/VoltageOS-staging/manifest.git -b 16 --git-lfs; \
 #repo init -u https://github.com/GrapheneOS/platform_manifest.git -b 16 --git-lfs; \
 
 # repo sync
@@ -24,7 +25,7 @@ rm -rf packages/resources/devicesettings; \
 
 # Device Tree
 
-git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch.git -b voltage-16 device/xiaomi/munch; \
+git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch.git device/xiaomi/munch; \
 
 # Vendor Tree
 
@@ -52,8 +53,8 @@ git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendo
 
 # Build
 
-rm -rf build/soong; \
-git clone https://github.com/Olzhas-Kdyr/build_soong.git build/soong; \
+#rm -rf build/soong; \
+#git clone https://github.com/Olzhas-Kdyr/build_soong.git build/soong; \
 
 . build/envsetup.sh; \
 brunch munch
