@@ -52,12 +52,13 @@ git clone https://github.com/PocoF3Releases/packages_resources_devicesettings pa
 
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera; \
 
+# BCR
+
+git clone https://github.com/munch-devs/android_vendor_bcr vendor/bcr; \
+
 # Build
 
-#rm -rf build/soong; \
-#git clone https://github.com/Olzhas-Kdyr/build_soong.git build/soong; \
 export PIXELAGE_BUILD="munch"
 
 . build/envsetup.sh; \
 lunch pixelage_munch-bp2a-userdebug && mka bacon
-
