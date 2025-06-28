@@ -4,7 +4,7 @@ rm -rf .repo/local_manifests; \
 
 # Repo Init
 
-repo init -u https://github.com/ProjectPixelage/android_manifest.git -b 16 --git-lfs; \
+repo init -u https://github.com/ProjectPixelage/android_manifest.git -b 15 --git-lfs; \
 
 # repo sync
 
