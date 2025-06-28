@@ -5,9 +5,6 @@ rm -rf .repo/local_manifests; \
 # Repo Init
 
 repo init -u https://github.com/ProjectPixelage/android_manifest.git -b 16 --git-lfs; \
-#repo init -u https://github.com/LineageOS/android.git -b lineage-22.3 --git-lfs; \
-#repo init -u https://github.com/VoltageOS-staging/manifest.git -b 16 --git-lfs; \
-#repo init -u https://github.com/GrapheneOS/platform_manifest.git -b 16 --git-lfs; \
 
 # repo sync
 
