@@ -4,7 +4,8 @@ rm -rf .repo/local_manifests; \
 
 # Repo Init
 
-repo init -u https://github.com/LineageOS/android.git -b lineage-22.3 --git-lfs; \
+repo init -u https://github.com/ProjectPixelage/android_manifest.git -b 16 --git-lfs; \
+#repo init -u https://github.com/LineageOS/android.git -b lineage-22.3 --git-lfs; \
 #repo init -u https://github.com/VoltageOS-staging/manifest.git -b 16 --git-lfs; \
 #repo init -u https://github.com/GrapheneOS/platform_manifest.git -b 16 --git-lfs; \
 
@@ -25,7 +26,7 @@ rm -rf packages/resources/devicesettings; \
 
 # Device Tree
 
-git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch.git device/xiaomi/munch; \
+git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch.git -b pixelage device/xiaomi/munch; \
 
 # Vendor Tree
 
@@ -55,6 +56,8 @@ git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendo
 
 #rm -rf build/soong; \
 #git clone https://github.com/Olzhas-Kdyr/build_soong.git build/soong; \
+export PIXELAGE_BUILD="munch"
 
 . build/envsetup.sh; \
-brunch munch
+lunch pixelage_munch-bp2a-userdebug && mka bacon
+
