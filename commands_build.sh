@@ -58,4 +58,4 @@ git clone https://github.com/munch-devs/android_vendor_bcr vendor/bcr; \
 export PIXELAGE_BUILD="munch"
 
 . build/envsetup.sh; \
-lunch pixelage_munch-bp2a-userdebug && mka bacon
+lunch pixelage_munch-bp1a-user && mka bacon
