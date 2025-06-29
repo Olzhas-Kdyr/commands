@@ -4,7 +4,7 @@ rm -rf .repo/local_manifests; \
 
 # Repo Init
 
-repo init -u https://github.com/ProjectPixelage/android_manifest.git -b 15 --git-lfs; \
+repo init -u https://github.com/VoltageOS-staging/manifest.git -b 16 --git-lfs; \
 
 # repo sync
 
@@ -23,7 +23,7 @@ rm -rf packages/resources/devicesettings; \
 
 # Device Tree
 
-git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch.git -b pixelage device/xiaomi/munch; \
+git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch.git -b voltage-16 device/xiaomi/munch; \
 
 # Vendor Tree
 
@@ -55,7 +55,5 @@ git clone https://github.com/munch-devs/android_vendor_bcr vendor/bcr; \
 
 # Build
 
-export PIXELAGE_BUILD="munch"
-
 . build/envsetup.sh; \
-lunch pixelage_munch-bp1a-user && mka bacon
+brunch munch
