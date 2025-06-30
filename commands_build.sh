@@ -57,8 +57,7 @@ git clone https://github.com/munch-devs/android_vendor_bcr vendor/bcr; \
 # Build
 
 rm -rf build/soong; \
-git clone https://github.com/Olzhas-Kdyr/build_soong.git build/soong; \
+git clone https://github.com/Olzhas-Kdyr/build_soong-pos.git build/soong; \
 
 . build/envsetup.sh; \
-#brunch munch
 lunch aosp_munch-bp2a-eng && mka bacon
