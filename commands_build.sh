@@ -29,11 +29,11 @@ git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch.git device/
 
 # Vendor Tree
 
-git clone https://github.com/munch-devs/android_vendor_xiaomi_munch.git vendor/xiaomi/munch; \
+git clone https://github.com/munch-devs/android_vendor_xiaomi_munch.git -b 16 vendor/xiaomi/munch; \
 
 # Kernel Tree
 
-git clone https://github.com/munch-devs/kernel_xiaomi_munch.git -b munch-ksu-susfs kernel/xiaomi/munch; \
+git clone https://github.com/munch-devs/kernel_xiaomi_munch.git -b munch-ksu-bpf kernel/xiaomi/munch; \
 
 # Hardware Xiaomi
 
