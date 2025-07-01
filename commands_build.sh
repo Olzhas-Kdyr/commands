@@ -4,7 +4,8 @@ rm -rf .repo/local_manifests; \
 
 # Repo Init
 
-repo init -u https://github.com/RisingOS-Revived/android -b qpr2 --git-lfs; \
+#repo init -u https://github.com/RisingOS-Revived/android -b qpr2 --git-lfs; \
+repo init -u https://github.com/Black-Iron-Project/manifest -b v15_QPR2 --git-lfs; \
 
 # repo sync
 
@@ -52,6 +53,7 @@ git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendo
 # Build
 
 . build/envsetup.sh; \
-riseup munch user && rise b
+#riseup munch user && rise b
+blkilunch munch user && blki b
 
 # End
