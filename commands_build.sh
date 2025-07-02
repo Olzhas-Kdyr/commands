@@ -60,6 +60,11 @@ git clone https://github.com/Olzhas-Kdyr/packages_apps_ViPER4AndroidFX packages/
 
 . build/envsetup.sh; \
 #riseup munch user && rise b
+blkilunch munch user && blki b; \
+
+rm -rf out/target/product/vanilla out/target/product/gapps out/target/product/full_gapps; \
+cd out/target/product && mv munch vanilla && cd ../../..; \
+cd device/xiaomi/munch && rm -rf lineage_munch.mk && mv gapps.txt lineage_munch.mk && cd ../../..; \
+. build/envsetup.sh; \
 blkilunch munch user && blki b
-#brunch munch
 # End
