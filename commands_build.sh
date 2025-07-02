@@ -22,6 +22,7 @@ rm -rf hardware/xiaomi; \
 rm -rf hardware/dolby; \
 rm -rf vendor/xiaomi/miuicamera; \
 rm -rf packages/resources/devicesettings; \
+rm -rf packages/apps/ViPER4AndroidFX; \
 
 # Device Tree
 
