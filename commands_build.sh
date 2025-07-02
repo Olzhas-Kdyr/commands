@@ -51,6 +51,10 @@ git clone https://github.com/PocoF3Releases/packages_resources_devicesettings pa
 
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera; \
 
+# Viperfx
+
+git clone https://github.com/Olzhas-Kdyr/packages_apps_ViPER4AndroidFX packages/apps/ViPER4AndroidFX; \
+
 # Build
 
 . build/envsetup.sh; \
