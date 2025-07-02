@@ -5,8 +5,8 @@ rm -rf .repo/local_manifests; \
 # Repo Init
 
 #repo init -u https://github.com/RisingOS-Revived/android -b qpr2 --git-lfs; \
-#repo init -u https://github.com/Black-Iron-Project/manifest -b v15_QPR2 --git-lfs; \
-repo init -u https://github.com/LineageOS/android.git -b lineage-23.0 --git-lfs; \
+repo init -u https://github.com/Black-Iron-Project/manifest -b v15_QPR2 --git-lfs; \
+#repo init -u https://github.com/LineageOS/android.git -b lineage-23.0 --git-lfs; \
 
 # repo sync
 
@@ -29,11 +29,11 @@ git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch.git device/
 
 # Vendor Tree
 
-git clone https://github.com/munch-devs/android_vendor_xiaomi_munch.git -b 16 vendor/xiaomi/munch; \
+git clone https://github.com/munch-devs/android_vendor_xiaomi_munch.git vendor/xiaomi/munch; \
 
 # Kernel Tree
 
-git clone https://github.com/munch-devs/kernel_xiaomi_munch.git -b munch-ksu-bpf kernel/xiaomi/munch; \
+git clone https://github.com/munch-devs/kernel_xiaomi_munch.git -b munch-ksu-susfs kernel/xiaomi/munch; \
 
 # Hardware Xiaomi
 
@@ -55,6 +55,6 @@ git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendo
 
 . build/envsetup.sh; \
 #riseup munch user && rise b
-#blkilunch munch user && blki b
-brunch munch
+blkilunch munch user && blki b
+#brunch munch
 # End
