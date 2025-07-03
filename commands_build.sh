@@ -10,6 +10,8 @@ repo init -u https://github.com/Black-Iron-Project/manifest -b v15_QPR2 --git-lf
 
 # repo sync
 
+rm -rf prebuilts/clang/host/linux-x86; \
+
 /opt/crave/resync.sh; \
 
 # Remove Device,Vendor,Kernel,Hardware,Dolby,MiuiCamera trees
@@ -54,7 +56,7 @@ git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendo
 
 # Viperfx
 
-git clone https://github.com/Olzhas-Kdyr/packages_apps_ViPER4AndroidFX packages/apps/ViPER4AndroidFX; \
+#git clone https://github.com/Olzhas-Kdyr/packages_apps_ViPER4AndroidFX packages/apps/ViPER4AndroidFX; \
 
 # Build
 
