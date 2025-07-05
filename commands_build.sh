@@ -16,7 +16,7 @@ rm -rf vendor/xiaomi/miuicamera; \
 rm -rf packages/resources/devicesettings; \
 rm -rf packages/apps/ViPER4AndroidFX; \
 
-git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch.git -b infinity-test device/xiaomi/munch; \
+git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch.git -b infinity device/xiaomi/munch; \
 git clone https://github.com/munch-devs/android_vendor_xiaomi_munch.git vendor/xiaomi/munch; \
 git clone https://github.com/Olzhas-Kdyr/kernel_xiaomi_sm8250.git kernel/xiaomi/munch; \
 git clone https://github.com/Olzhas-Kdyr/android_hardware_xiaomi.git hardware/xiaomi; \
@@ -28,9 +28,9 @@ git clone https://github.com/Olzhas-Kdyr/ViPER4AndroidFX.git packages/apps/ViPER
 . build/envsetup.sh; \
 lunch infinity_munch-user && mka bacon; \
 
-rm -rf out/target/product/vanilla out/target/product/gapps out/target/product/full_gapps; \
-cd out/target/product && mv munch vanilla && cd ../../..; \
-cd device/xiaomi/munch && rm -rf infinity_munch.mk && mv gapps.txt infinity_munch.mk && cd ../../..; \
+#rm -rf out/target/product/vanilla out/target/product/gapps out/target/product/full_gapps; \
+#cd out/target/product && mv munch vanilla && cd ../../..; \
+#cd device/xiaomi/munch && rm -rf infinity_munch.mk && mv gapps.txt infinity_munch.mk && cd ../../..; \
 
-. build/envsetup.sh; \
-lunch infinity_munch-user && mka bacon
+#. build/envsetup.sh; \
+#lunch infinity_munch-user && mka bacon
