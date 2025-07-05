@@ -18,7 +18,7 @@ rm -rf packages/apps/ViPER4AndroidFX; \
 
 git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch.git -b infinity-test device/xiaomi/munch; \
 git clone https://github.com/munch-devs/android_vendor_xiaomi_munch.git vendor/xiaomi/munch; \
-git clone https://github.com/munch-devs/kernel_xiaomi_munch.git -b munch-ksu kernel/xiaomi/munch; \
+git clone https://github.com/Olzhas-Kdyr/kernel_xiaomi_sm8250.git kernel/xiaomi/munch; \
 git clone https://github.com/Olzhas-Kdyr/android_hardware_xiaomi.git hardware/xiaomi; \
 git clone https://github.com/munch-devs/android_hardware_dolby.git hardware/dolby; \
 git clone https://github.com/PocoF3Releases/packages_resources_devicesettings packages/resources/devicesettings; \
