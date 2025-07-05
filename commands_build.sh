@@ -28,9 +28,9 @@ git clone https://github.com/Olzhas-Kdyr/ViPER4AndroidFX.git packages/apps/ViPER
 . build/envsetup.sh; \
 lunch infinity_munch-user && mka bacon; \
 
-#rm -rf out/target/product/vanilla out/target/product/gapps out/target/product/full_gapps; \
-#cd out/target/product && mv munch vanilla && cd ../../..; \
-#cd device/xiaomi/munch && rm -rf infinity_munch.mk && mv gapps.txt infinity_munch.mk && cd ../../..; \
+rm -rf out/target/product/vanilla out/target/product/gapps out/target/product/full_gapps; \
+cd out/target/product && mv munch vanilla && cd ../../..; \
+cd device/xiaomi/munch && rm -rf infinity_munch.mk && mv gapps.txt infinity_munch.mk && cd ../../..; \
 
-#. build/envsetup.sh; \
-#lunch infinity_munch-user && mka bacon
+. build/envsetup.sh; \
+lunch infinity_munch-user && mka bacon
