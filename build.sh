@@ -1,7 +1,7 @@
 rm -rf .repo/local_manifests; \
 
-#repo init -u https://github.com/PixelOS-AOSP/manifest.git -b sixteen --git-lfs; \
-repo init -u https://github.com/ProjectPixelage/android_manifest.git -b 16 --git-lfs
+repo init -u https://github.com/PixelOS-AOSP/manifest.git -b sixteen --git-lfs; \
+#repo init -u https://github.com/ProjectPixelage/android_manifest.git -b 16 --git-lfs
 
 rm -rf prebuilts/clang/host/linux-x86; \
 
@@ -18,7 +18,7 @@ rm -rf vendor/xiaomi/miuicamera; \
 rm -rf packages/resources/devicesettings; \
 rm -rf packages/apps/ViPER4AndroidFX; \
 
-git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch.git -b pixelage device/xiaomi/munch; \
+git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch.git -b aosp device/xiaomi/munch; \
 git clone https://github.com/munch-devs/android_vendor_xiaomi_munch.git -b 16 vendor/xiaomi/munch; \
 #git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_munch-firmware.git vendor/xiaomi/munch-firmware; \
 #git clone https://github.com/Olzhas-Kdyr/kernel_xiaomi_sm8250.git kernel/xiaomi/munch; \
@@ -28,13 +28,13 @@ git clone https://github.com/PocoF3Releases/packages_resources_devicesettings pa
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera; \
 git clone https://github.com/Olzhas-Kdyr/ViPER4AndroidFX.git packages/apps/ViPER4AndroidFX; \
 
-#rm -rf packages/apps/ColumbusService; \
-#git clone https://github.com/Olzhas-Kdyr/packages_apps_ColumbusService.git -b sixteen packages/apps/ColumbusService; \
+rm -rf packages/apps/ColumbusService; \
+git clone https://github.com/Olzhas-Kdyr/packages_apps_ColumbusService.git -b sixteen packages/apps/ColumbusService; \
 
-export PIXELAGE_BUILD="munch"
+#export PIXELAGE_BUILD="munch"
 
 . build/envsetup.sh; \
-lunch pixelage_munch-bp2a-user && mka bacon; \
+lunch aosp_munch-bp2a-user && mka bacon; \
 
 #rm -rf out/target/product/vanilla out/target/product/gapps out/target/product/full_gapps; \
 #cd out/target/product && mv munch vanilla && cd ../../..; \
