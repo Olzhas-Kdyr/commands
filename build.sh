@@ -25,6 +25,7 @@ git clone https://github.com/Olzhas-Kdyr/android_hardware_xiaomi.git hardware/xi
 git clone https://github.com/munch-devs/android_hardware_dolby.git hardware/dolby; \
 git clone https://github.com/PocoF3Releases/packages_resources_devicesettings packages/resources/devicesettings; \
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera; \
+git clone https://github.com/Olzhas-Kdyr/ViPER4AndroidFX.git packages/apps/ViPER4AndroidFX; \
 
 . build/envsetup.sh; \
 lunch infinity_munch-user && mka bacon; \
