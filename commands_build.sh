@@ -29,7 +29,7 @@ git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch.git -b aosp
 git clone https://github.com/Olzhas-Kdyr/ViPER4AndroidFX.git packages/apps/ViPER4AndroidFX; \
 
 rm -rf packages/apps/ColumbusService; \
-git clone https://github.com/Olzhas-Kdyr/packages_apps_ColumbusService.git packages/apps/ColumbusService; \
+git clone https://github.com/Olzhas-Kdyr/packages_apps_ColumbusService.git -b sixteen packages/apps/ColumbusService; \
 
 . build/envsetup.sh; \
 lunch aosp_munch-bp2a-user && mka bacon; \
