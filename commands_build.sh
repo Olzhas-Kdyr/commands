@@ -8,7 +8,7 @@
 #/opt/crave/resync.sh; \
 
 rm -rf out/target/product/munch; \
-rm -rf device/xiaomi/munch; \
+#rm -rf device/xiaomi/munch; \
 #rm -rf kernel/xiaomi/munch; \
 #rm -rf vendor/xiaomi/munch; \
 #rm -rf vendor/xiaomi/munch-firmware; \
@@ -16,9 +16,9 @@ rm -rf device/xiaomi/munch; \
 #rm -rf hardware/dolby; \
 #rm -rf vendor/xiaomi/miuicamera; \
 #rm -rf packages/resources/devicesettings; \
-rm -rf packages/apps/ViPER4AndroidFX; \
+#rm -rf packages/apps/ViPER4AndroidFX; \
 
-git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch.git -b aosp device/xiaomi/munch; \
+#git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch.git -b aosp device/xiaomi/munch; \
 #git clone https://github.com/munch-devs/android_vendor_xiaomi_munch.git -b 16 vendor/xiaomi/munch; \
 #git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_munch-firmware.git vendor/xiaomi/munch-firmware; \
 #git clone https://github.com/Olzhas-Kdyr/kernel_xiaomi_sm8250.git kernel/xiaomi/munch; \
@@ -26,7 +26,7 @@ git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch.git -b aosp
 #git clone https://github.com/munch-devs/android_hardware_dolby.git hardware/dolby; \
 #git clone https://github.com/PocoF3Releases/packages_resources_devicesettings packages/resources/devicesettings; \
 #git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera; \
-git clone https://github.com/Olzhas-Kdyr/ViPER4AndroidFX.git packages/apps/ViPER4AndroidFX; \
+#git clone https://github.com/Olzhas-Kdyr/ViPER4AndroidFX.git packages/apps/ViPER4AndroidFX; \
 
 rm -rf packages/apps/ColumbusService; \
 git clone https://github.com/Olzhas-Kdyr/packages_apps_ColumbusService.git -b sixteen packages/apps/ColumbusService; \
