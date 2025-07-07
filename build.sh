@@ -1,13 +1,18 @@
+# Remove local_manifests
+
 rm -rf .repo/local_manifests; \
 
-#repo init -u https://github.com/Black-Iron-Project/manifest -b v15_QPR2 --git-lfs; \
-#repo init -u https://git.libremobileos.com/LMODroid/manifest.git -b fifteen --git-lfs; \
+# Repo init
+
 repo init --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b 15 -g default,-mips,-darwin,-notdefault; \
 
+# Fix clang error
 rm -rf prebuilts/clang/host/linux-x86; \
 
+# Repo sync
 /opt/crave/resync.sh; \
 
+# Remove old device specific repos
 rm -rf out/target/product/munch; \
 rm -rf device/xiaomi/munch; \
 rm -rf kernel/xiaomi/munch; \
@@ -18,14 +23,35 @@ rm -rf vendor/xiaomi/miuicamera; \
 rm -rf packages/resources/devicesettings; \
 rm -rf packages/apps/ViPER4AndroidFX; \
 
+# Clone new device specific repos
+
+# Deivce Tree
+
 git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch.git -b infinity device/xiaomi/munch; \
+
+# Vendor Tree
 git clone https://github.com/munch-devs/android_vendor_xiaomi_munch.git vendor/xiaomi/munch; \
+
+# Kernel Tree (MagicTime)
+
 git clone https://github.com/Olzhas-Kdyr/kernel_xiaomi_sm8250 kernel/xiaomi/munch; \
+
+# Hardware Xiaomi
 git clone https://github.com/Olzhas-Kdyr/android_hardware_xiaomi.git hardware/xiaomi; \
+
+# Hardware Dolby Atmos
 git clone https://github.com/munch-devs/android_hardware_dolby.git hardware/dolby; \
+
+# DeviceSettings
 git clone https://github.com/PocoF3Releases/packages_resources_devicesettings packages/resources/devicesettings; \
+
+# MIUI Camera
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera; \
+
+# ViPER4AndroidFX
 git clone https://github.com/Olzhas-Kdyr/ViPER4AndroidFX.git packages/apps/ViPER4AndroidFX; \
+
+# Build
 
 . build/envsetup.sh; \
 lunch infinity_munch-user && mka bacon; \
