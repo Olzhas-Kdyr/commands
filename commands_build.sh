@@ -1,6 +1,7 @@
 rm -rf .repo/local_manifests; \
 
-repo init -u https://github.com/Black-Iron-Project/manifest -b v15_QPR2 --git-lfs; \
+#repo init -u https://github.com/Black-Iron-Project/manifest -b v15_QPR2 --git-lfs; \
+repo init -u https://git.libremobileos.com/LMODroid/manifest.git -b fifteen --git-lfs; \
 
 rm -rf prebuilts/clang/host/linux-x86; \
 
@@ -25,11 +26,11 @@ git clone https://github.com/PocoF3Releases/packages_resources_devicesettings pa
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera; \
 
 . build/envsetup.sh; \
-blkilunch munch user && blki b; \
+lunch lineage_munch-bp1a-user && mka bacon; \
 
-rm -rf out/target/product/vanilla out/target/product/gapps out/target/product/full_gapps; \
-cd out/target/product && mv munch vanilla && cd ../../..; \
-cd device/xiaomi/munch && rm -rf lineage_munch.mk && mv gapps.txt lineage_munch.mk && cd ../../..; \
+#rm -rf out/target/product/vanilla out/target/product/gapps out/target/product/full_gapps; \
+#cd out/target/product && mv munch vanilla && cd ../../..; \
+#cd device/xiaomi/munch && rm -rf lineage_munch.mk && mv gapps.txt lineage_munch.mk && cd ../../..; \
 
-. build/envsetup.sh; \
-blkilunch munch user && blki b
+#. build/envsetup.sh; \
+#blkilunch munch user && blki b
