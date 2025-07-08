@@ -58,5 +58,8 @@ git clone https://github.com/Olzhas-Kdyr/packages_apps_ColumbusService.git -b si
 rm -rf packages/services/Telecomm; \
 git clone https://github.com/Olzhas-Kdyr/packages_services_Telecomm.git -b sixteen packages/services/Telecomm; \
 
+rm -rf bionic; \
+git clone https://github.com/Olzhas-Kdyr/bionic.git bionic; \
+
 . build/envsetup.sh; \
 lunch aosp_munch-bp2a-user && mka bacon; \
