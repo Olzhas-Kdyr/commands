@@ -52,8 +52,8 @@ git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendo
 git clone https://github.com/Olzhas-Kdyr/ViPER4AndroidFX.git packages/apps/ViPER4AndroidFX; \
 
 # Build
-rm -rf packages/apps/ColumbusService; \
-git clone https://github.com/Olzhas-Kdyr/packages_apps_ColumbusService.git -b sixteen packages/apps/ColumbusService; \
+#rm -rf packages/apps/ColumbusService; \
+#git clone https://github.com/Olzhas-Kdyr/packages_apps_ColumbusService.git -b sixteen packages/apps/ColumbusService; \
 
 . build/envsetup.sh; \
 lunch aosp_munch-bp2a-user && mka bacon; \
