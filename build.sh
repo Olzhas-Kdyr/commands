@@ -28,7 +28,7 @@ rm -rf packages/apps/ViPER4AndroidFX; \
 
 # Deivce Tree
 
-git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch.git device/xiaomi/munch; \
+git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch.git -b alpha device/xiaomi/munch; \
 
 # Vendor Tree
 git clone https://github.com/munch-devs/android_vendor_xiaomi_munch.git vendor/xiaomi/munch; \
@@ -38,7 +38,7 @@ git clone https://github.com/munch-devs/android_vendor_xiaomi_munch.git vendor/x
 git clone https://github.com/Olzhas-Kdyr/kernel_xiaomi_sm8250 kernel/xiaomi/munch; \
 
 # Hardware Xiaomi
-git clone https://github.com/Olzhas-Kdyr/android_hardware_xiaomi.git hardware/xiaomi; \
+git clone https://github.com/Olzhas-Kdyr/android_hardware_xiaomi.git -b bk hardware/xiaomi; \
 
 # Hardware Dolby Atmos
 git clone https://github.com/munch-devs/android_hardware_dolby.git hardware/dolby; \
@@ -55,10 +55,11 @@ git clone https://github.com/Olzhas-Kdyr/ViPER4AndroidFX.git packages/apps/ViPER
 # Build
 
 . build/envsetup.sh; \
+lunch alpha_munch-user && make bacon; \
+
+rm -rf out/target/product/vanilla out/target/product/gapps out/target/product/full_gapps; \
+cd out/target/product && mv munch vanilla && cd ../../..; \
+cd device/xiaomi/munch && rm -rf alpha_munch.mk && mv gapps.txt alpha_munch.mk && cd ../../..; \
+
+. build/envsetup.sh; \
 lunch alpha_munch-user && make bacon
-
-#rm -rf out/target/product/vanilla out/target/product/gapps out/target/product/full_gapps; \
-#cd out/target/product && mv munch vanilla && cd ../../..; \
-#cd device/xiaomi/munch && rm -rf lineage_munch.mk && mv gapps.txt lineage_munch.mk && cd ../../..; \
-
-#. build/envsetup.sh; \
