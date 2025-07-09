@@ -31,7 +31,7 @@ rm -rf packages/apps/ViPER4AndroidFX; \
 git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch.git -b alpha device/xiaomi/munch; \
 
 # Vendor Tree
-git clone https://github.com/munch-devs/android_vendor_xiaomi_munch.git vendor/xiaomi/munch; \
+git clone https://github.com/Olzhas-Kdyr/android_vendor_xiaomi_munch.git vendor/xiaomi/munch; \
 
 # Kernel Tree (MagicTime)
 
