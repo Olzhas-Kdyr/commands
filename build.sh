@@ -4,7 +4,8 @@ rm -rf .repo/local_manifests; \
 
 # Repo init
 
-repo init --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b 15 -g default,-mips,-darwin,-notdefault; \
+#repo init --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b 15 -g default,-mips,-darwin,-notdefault; \
+repo init -u https://github.com/alphadroid-project/manifest -b alpha-15.2 --git-lfs; \
 
 # Fix clang error
 rm -rf prebuilts/clang/host/linux-x86; \
@@ -27,7 +28,7 @@ rm -rf packages/apps/ViPER4AndroidFX; \
 
 # Deivce Tree
 
-git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch.git -b infinity device/xiaomi/munch; \
+git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch.git device/xiaomi/munch; \
 
 # Vendor Tree
 git clone https://github.com/munch-devs/android_vendor_xiaomi_munch.git vendor/xiaomi/munch; \
@@ -54,11 +55,10 @@ git clone https://github.com/Olzhas-Kdyr/ViPER4AndroidFX.git packages/apps/ViPER
 # Build
 
 . build/envsetup.sh; \
-lunch infinity_munch-user && mka bacon; \
+lunch alpha_munch-user && make bacon
 
 #rm -rf out/target/product/vanilla out/target/product/gapps out/target/product/full_gapps; \
 #cd out/target/product && mv munch vanilla && cd ../../..; \
 #cd device/xiaomi/munch && rm -rf lineage_munch.mk && mv gapps.txt lineage_munch.mk && cd ../../..; \
 
 #. build/envsetup.sh; \
-#blkilunch munch user && blki b
