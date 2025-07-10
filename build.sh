@@ -1,16 +1,16 @@
 # Remove local_manifests
 
-rm -rf .repo/local_manifests; \
+#rm -rf .repo/local_manifests; \
 
 # Repo init
 
-repo init -u https://github.com/PixelOS-AOSP/manifest.git -b sixteen --git-lfs; \
+#repo init -u https://github.com/PixelOS-AOSP/manifest.git -b sixteen --git-lfs; \
 
 # Fix clang error
-rm -rf prebuilts/clang/host/linux-x86; \
+#rm -rf prebuilts/clang/host/linux-x86; \
 
 # Repo sync
-/opt/crave/resync.sh; \
+#/opt/crave/resync.sh; \
 
 # Remove old device specific repos
 rm -rf out/target/product/munch; \
