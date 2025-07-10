@@ -52,10 +52,12 @@ git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendo
 # ViPER4AndroidFX
 git clone https://github.com/Olzhas-Kdyr/ViPER4AndroidFX.git packages/apps/ViPER4AndroidFX; \
 
-# Build
+# Build VANILLA build
 
 . build/envsetup.sh; \
 lunch alpha_munch-user && make bacon; \
+
+# Build GAPPS build
 
 rm -rf out/target/product/vanilla out/target/product/gapps out/target/product/full_gapps; \
 cd out/target/product && mv munch vanilla && cd ../../..; \
@@ -63,3 +65,4 @@ cd device/xiaomi/munch && rm -rf alpha_munch.mk && mv gapps.txt alpha_munch.mk &
 
 . build/envsetup.sh; \
 lunch alpha_munch-user && make bacon
+# End of script 
