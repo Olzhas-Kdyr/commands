@@ -4,8 +4,7 @@ rm -rf .repo/local_manifests; \
 
 # Repo init
 
-#repo init -u https://github.com/PixelOS-AOSP/manifest.git -b sixteen --git-lfs; \
-repo init -u https://github.com/VoltageOS-staging/manifest.git -b 16 --git-lfs; \
+repo init -u https://github.com/PixelOS-AOSP/manifest.git -b sixteen --git-lfs; \
 
 # Fix clang error
 rm -rf prebuilts/clang/host/linux-x86; \
@@ -28,7 +27,7 @@ rm -rf packages/apps/ViPER4AndroidFX; \
 
 # Deivce Tree
 
-git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch.git -b voltage-16 device/xiaomi/munch; \
+git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch.git -b aosp device/xiaomi/munch; \
 
 # Vendor Tree
 git clone https://github.com/munch-devs/android_vendor_xiaomi_munch.git -b 16 vendor/xiaomi/munch; \
@@ -53,15 +52,14 @@ git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendo
 git clone https://github.com/Olzhas-Kdyr/ViPER4AndroidFX.git packages/apps/ViPER4AndroidFX; \
 
 # Build
-#rm -rf packages/apps/ColumbusService; \
-#git clone https://github.com/Olzhas-Kdyr/packages_apps_ColumbusService.git -b sixteen packages/apps/ColumbusService; \
+rm -rf packages/apps/ColumbusService; \
+git clone https://github.com/Olzhas-Kdyr/packages_apps_ColumbusService.git -b sixteen packages/apps/ColumbusService; \
 
-#rm -rf packages/services/Telecomm; \
-#git clone https://github.com/Olzhas-Kdyr/packages_services_Telecomm.git -b sixteen packages/services/Telecomm; \
+rm -rf packages/services/Telecomm; \
+git clone https://github.com/Olzhas-Kdyr/packages_services_Telecomm.git -b sixteen packages/services/Telecomm; \
 
-#rm -rf bionic; \
-#git clone https://github.com/Olzhas-Kdyr/bionic.git bionic; \
+rm -rf bionic; \
+git clone https://github.com/Olzhas-Kdyr/bionic.git bionic; \
 
 . build/envsetup.sh; \
-brunch munch
-#lunch aosp_munch-bp2a-user && mka bacon; \
+lunch aosp_munch-bp2a-user && mka bacon; \
