@@ -5,7 +5,8 @@ rm -rf .repo/local_manifests; \
 # Repo init
 
 #repo init -u https://github.com/PixelOS-AOSP/manifest.git -b sixteen --git-lfs; \
-repo init -u https://github.com/LineageOS/android.git -b lineage-23.0 --git-lfs; \
+#repo init -u https://github.com/LineageOS/android.git -b lineage-23.0 --git-lfs; \
+repo init -u https://github.com/AxionAOSP/android.git -b lineage-23.0 --git-lfs; \
 
 # Fix clang error
 rm -rf prebuilts/clang/host/linux-x86; \
@@ -28,7 +29,7 @@ rm -rf packages/apps/ViPER4AndroidFX; \
 
 # Deivce Tree
 
-git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch.git -b 16 device/xiaomi/munch; \
+git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch.git -b axion device/xiaomi/munch; \
 
 # Vendor Tree
 git clone https://github.com/munch-devs/android_vendor_xiaomi_munch.git -b 16 vendor/xiaomi/munch; \
