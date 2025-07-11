@@ -64,4 +64,4 @@ git clone https://github.com/Olzhas-Kdyr/ViPER4AndroidFX.git packages/apps/ViPER
 #git clone https://github.com/Olzhas-Kdyr/bionic.git bionic; \
 
 . build/envsetup.sh; \
-lunch lineage_munch-bp2a-user && mka bacon; \
+lunch lineage_munch-bp2a-userdebug && mka bacon; \
