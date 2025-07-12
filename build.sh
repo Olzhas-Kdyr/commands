@@ -6,7 +6,8 @@ rm -rf .repo/local_manifests; \
 
 #repo init -u https://github.com/PixelOS-AOSP/manifest.git -b sixteen --git-lfs; \
 #repo init -u https://github.com/LineageOS/android.git -b lineage-23.0 --git-lfs; \
-repo init -u https://github.com/AxionAOSP/android.git -b lineage-23.0 --git-lfs; \
+#repo init -u https://github.com/AxionAOSP/android.git -b lineage-23.0 --git-lfs; \
+repo init -u https://github.com/Evolution-X/manifest -b bka --git-lfs; \
 
 # Fix clang error
 rm -rf prebuilts/clang/host/linux-x86; \
@@ -29,7 +30,7 @@ rm -rf packages/apps/ViPER4AndroidFX; \
 
 # Deivce Tree
 
-git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch.git -b axion device/xiaomi/munch; \
+git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch.git -b 16 device/xiaomi/munch; \
 
 # Vendor Tree
 git clone https://github.com/munch-devs/android_vendor_xiaomi_munch.git -b 16 vendor/xiaomi/munch; \
@@ -64,4 +65,4 @@ git clone https://github.com/Olzhas-Kdyr/ViPER4AndroidFX.git packages/apps/ViPER
 #git clone https://github.com/Olzhas-Kdyr/bionic.git bionic; \
 
 . build/envsetup.sh; \
-lunch lineage_munch-bp2a-userdebug && mka bacon; \
+lunch lineage_munch-bp2a-userdebug && m evolution; \
