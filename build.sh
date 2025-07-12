@@ -64,6 +64,8 @@ git clone https://github.com/Olzhas-Kdyr/ViPER4AndroidFX.git packages/apps/ViPER
 
 #rm -rf bionic; \
 #git clone https://github.com/Olzhas-Kdyr/bionic.git bionic; \
+rm -rf device/qcom/common; \
+git clone https://github.com/Olzhas-Kdyr/device_qcom_common device/qcom/common; \
 
 source build/envsetup.sh
 lunch yaap_munch-user && m yaap
