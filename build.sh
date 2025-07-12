@@ -7,7 +7,8 @@ rm -rf .repo/local_manifests; \
 #repo init -u https://github.com/PixelOS-AOSP/manifest.git -b sixteen --git-lfs; \
 #repo init -u https://github.com/LineageOS/android.git -b lineage-23.0 --git-lfs; \
 #repo init -u https://github.com/AxionAOSP/android.git -b lineage-23.0 --git-lfs; \
-repo init -u https://github.com/Evolution-X/manifest -b bka --git-lfs; \
+#repo init -u https://github.com/Evolution-X/manifest -b bka --git-lfs; \
+repo init -u https://github.com/yaap/manifest.git -b sixteen --git-lfs; \
 
 # Fix clang error
 rm -rf prebuilts/clang/host/linux-x86; \
@@ -64,5 +65,5 @@ git clone https://github.com/Olzhas-Kdyr/ViPER4AndroidFX.git packages/apps/ViPER
 #rm -rf bionic; \
 #git clone https://github.com/Olzhas-Kdyr/bionic.git bionic; \
 
-. build/envsetup.sh; \
-lunch lineage_munch-bp2a-userdebug && m evolution; \
+source build/envsetup.sh
+lunch yaap_munch-user && m yaap
