@@ -31,7 +31,7 @@ rm -rf packages/apps/ViPER4AndroidFX; \
 
 # Deivce Tree
 
-git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch.git -b 16 device/xiaomi/munch; \
+git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch.git -b yaap-16 device/xiaomi/munch; \
 
 # Vendor Tree
 git clone https://github.com/munch-devs/android_vendor_xiaomi_munch.git -b 16 vendor/xiaomi/munch; \
