@@ -38,9 +38,9 @@ git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch.git -b infi
 # Vendor Tree
 git clone https://github.com/munch-devs/android_vendor_xiaomi_munch.git -b 16 vendor/xiaomi/munch; \
 
-# Kernel Tree (MagicTime)
+# Kernel Tree (N0Kernel)
 
-git clone https://github.com/Olzhas-Kdyr/kernel_xiaomi_sm8250 kernel/xiaomi/munch; \
+git clone https://github.com/munch-devs/kernel_xiaomi_munch.git -b 16-ksu kernel/xiaomi/munch; \
 
 # Hardware Xiaomi
 git clone https://github.com/Olzhas-Kdyr/android_hardware_xiaomi.git -b 16 hardware/xiaomi; \
