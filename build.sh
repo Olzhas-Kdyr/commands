@@ -8,7 +8,8 @@ rm -rf .repo/local_manifests; \
 #repo init -u https://github.com/LineageOS/android.git -b lineage-23.0 --git-lfs; \
 #repo init -u https://github.com/AxionAOSP/android.git -b lineage-23.0 --git-lfs; \
 #repo init -u https://github.com/Evolution-X/manifest -b bka --git-lfs; \
-repo init -u https://github.com/yaap/manifest.git -b sixteen --git-lfs; \
+#repo init -u https://github.com/yaap/manifest.git -b sixteen --git-lfs; \
+repo init --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b 16 -g default,-mips,-darwin,-notdefault; \
 
 # Fix clang error
 rm -rf prebuilts/clang/host/linux-x86; \
@@ -31,7 +32,7 @@ rm -rf packages/apps/ViPER4AndroidFX; \
 
 # Deivce Tree
 
-git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch.git -b yaap-16 device/xiaomi/munch; \
+git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch.git -b infinity device/xiaomi/munch; \
 
 # Vendor Tree
 git clone https://github.com/munch-devs/android_vendor_xiaomi_munch.git -b 16 vendor/xiaomi/munch; \
@@ -66,8 +67,8 @@ git clone https://github.com/cyberknight777/android_packages_apps_FastCharge pac
 
 #rm -rf bionic; \
 #git clone https://github.com/Olzhas-Kdyr/bionic.git bionic; \
-rm -rf device/qcom/common; \
-git clone https://github.com/Olzhas-Kdyr/device_qcom_common device/qcom/common; \
+#rm -rf device/qcom/common; \
+#git clone https://github.com/Olzhas-Kdyr/device_qcom_common device/qcom/common; \
 
-source build/envsetup.sh
-lunch yaap_munch-user && m yaap
+. build/envsetup.sh; \
+lunch infinity_munch-user && mka bacon
