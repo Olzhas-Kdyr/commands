@@ -54,21 +54,12 @@ git clone https://github.com/PocoF3Releases/packages_resources_devicesettings pa
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera; \
 
 # ViPER4AndroidFX
-git clone https://github.com/Olzhas-Kdyr/ViPER4AndroidFX.git packages/apps/ViPER4AndroidFX; \
+#git clone https://github.com/Olzhas-Kdyr/ViPER4AndroidFX.git packages/apps/ViPER4AndroidFX; \
 
+# FastCharge
 git clone https://github.com/cyberknight777/android_packages_apps_FastCharge packages/apps/FastCharge; \
 
 # Build
-#rm -rf packages/apps/ColumbusService; \
-#git clone https://github.com/Olzhas-Kdyr/packages_apps_ColumbusService.git -b sixteen packages/apps/ColumbusService; \
-
-#rm -rf packages/services/Telecomm; \
-#git clone https://github.com/Olzhas-Kdyr/packages_services_Telecomm.git -b sixteen packages/services/Telecomm; \
-
-#rm -rf bionic; \
-#git clone https://github.com/Olzhas-Kdyr/bionic.git bionic; \
-#rm -rf device/qcom/common; \
-#git clone https://github.com/Olzhas-Kdyr/device_qcom_common device/qcom/common; \
 
 . build/envsetup.sh; \
 lunch infinity_munch-user && mka bacon
