@@ -2,7 +2,7 @@
 
 rm -rf .repo/local_manifests; \
 
-# Repo init
+# repo init
 
 #repo init -u https://github.com/PixelOS-AOSP/manifest.git -b sixteen --git-lfs; \
 #repo init -u https://github.com/LineageOS/android.git -b lineage-23.0 --git-lfs; \
@@ -14,7 +14,7 @@ repo init --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/man
 # Fix clang error
 rm -rf prebuilts/clang/host/linux-x86; \
 
-# Repo sync
+# repo sync script
 /opt/crave/resync.sh; \
 
 # Remove old device specific repos
@@ -27,6 +27,7 @@ rm -rf hardware/dolby; \
 rm -rf vendor/xiaomi/miuicamera; \
 rm -rf packages/resources/devicesettings; \
 rm -rf packages/apps/ViPER4AndroidFX; \
+rm -rf packages/apps/FastCharge; \
 
 # Clone new device specific repos
 
@@ -52,9 +53,6 @@ git clone https://github.com/PocoF3Releases/packages_resources_devicesettings pa
 
 # MIUI Camera
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera; \
-
-# ViPER4AndroidFX
-#git clone https://github.com/Olzhas-Kdyr/ViPER4AndroidFX.git packages/apps/ViPER4AndroidFX; \
 
 # FastCharge
 git clone https://github.com/cyberknight777/android_packages_apps_FastCharge packages/apps/FastCharge; \
