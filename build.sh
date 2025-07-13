@@ -63,4 +63,4 @@ rm -rf frameworks/base; \
 git clone https://github.com/Olzhas-Kdyr/frameworks_base.git -b 16 frameworks/base; \
 
 . build/envsetup.sh; \
-lunch infinity_munch-user && mka bacon
+lunch infinity_munch-user && m bacon
