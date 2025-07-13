@@ -1,6 +1,6 @@
 # Remove local_manifests
 
-rm -rf .repo/local_manifests; \
+#rm -rf .repo/local_manifests; \
 
 # repo init
 
@@ -9,18 +9,18 @@ rm -rf .repo/local_manifests; \
 #repo init -u https://github.com/AxionAOSP/android.git -b lineage-23.0 --git-lfs; \
 #repo init -u https://github.com/Evolution-X/manifest -b bka --git-lfs; \
 #repo init -u https://github.com/yaap/manifest.git -b sixteen --git-lfs; \
-repo init --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b 16 -g default,-mips,-darwin,-notdefault; \
+#repo init --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b 16 -g default,-mips,-darwin,-notdefault; \
 
 # Fix clang error
-rm -rf prebuilts/clang/host/linux-x86; \
+#rm -rf prebuilts/clang/host/linux-x86; \
 
 # repo sync script
-/opt/crave/resync.sh; \
+#/opt/crave/resync.sh; \
 
 # Remove old device specific repos
 rm -rf out/target/product/munch; \
 rm -rf device/xiaomi/munch; \
-rm -rf kernel/xiaomi/munch; \
+#rm -rf kernel/xiaomi/munch; \
 rm -rf vendor/xiaomi/munch; \
 rm -rf hardware/xiaomi; \
 rm -rf hardware/dolby; \
@@ -40,7 +40,7 @@ git clone https://github.com/munch-devs/android_vendor_xiaomi_munch.git -b 16 ve
 
 # Kernel Tree (N0Kernel)
 
-git clone https://github.com/munch-devs/kernel_xiaomi_munch.git -b 16-ksu kernel/xiaomi/munch; \
+#git clone https://github.com/munch-devs/kernel_xiaomi_munch.git -b 16-ksu kernel/xiaomi/munch; \
 
 # Hardware Xiaomi
 git clone https://github.com/Olzhas-Kdyr/android_hardware_xiaomi.git -b 16 hardware/xiaomi; \
