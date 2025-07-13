@@ -36,7 +36,7 @@ rm -rf packages/apps/FastCharge; \
 git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch.git -b infinity device/xiaomi/munch; \
 
 # Vendor Tree
-git clone https://github.com/munch-devs/android_vendor_xiaomi_munch.git -b 16 vendor/xiaomi/munch; \
+git clone https://github.com/Olzhas-Kdyr/android_vendor_xiaomi_munch -b 16 vendor/xiaomi/munch; \
 
 # Kernel Tree (N0Kernel)
 
@@ -46,10 +46,10 @@ git clone https://github.com/munch-devs/android_vendor_xiaomi_munch.git -b 16 ve
 git clone https://github.com/Olzhas-Kdyr/android_hardware_xiaomi.git -b 16 hardware/xiaomi; \
 
 # Hardware Dolby Atmos
-git clone https://github.com/munch-devs/android_hardware_dolby.git hardware/dolby; \
+git clone https://github.com/Olzhas-Kdyr/android_hardware_dolby hardware/dolby; \
 
 # DeviceSettings
-git clone https://github.com/PocoF3Releases/packages_resources_devicesettings packages/resources/devicesettings; \
+git clone https://github.com/Olzhas-Kdyr/android_packages_resources_devicesettings.git packages/resources/devicesettings; \
 
 # MIUI Camera
 git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera; \
