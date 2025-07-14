@@ -22,6 +22,7 @@ rm -rf out/target/product/munch; \
 rm -rf device/xiaomi/munch; \
 #rm -rf kernel/xiaomi/munch; \
 rm -rf vendor/xiaomi/munch; \
+rm -rf vendor/xiaomi/munch-firmware; \
 rm -rf hardware/xiaomi; \
 rm -rf hardware/dolby; \
 rm -rf vendor/xiaomi/miuicamera; \
@@ -32,14 +33,15 @@ rm -rf packages/apps/FastCharge; \
 # Clone new device specific repos
 
 # Deivce Tree
-
 git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch.git -b infinity device/xiaomi/munch; \
 
 # Vendor Tree
 git clone https://github.com/Olzhas-Kdyr/android_vendor_xiaomi_munch -b 16 vendor/xiaomi/munch; \
 
-# Kernel Tree (N0Kernel)
+# Munch FW
+git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_munch-firmware vendor/xiaomi/munch-firmware; \
 
+# Kernel Tree (N0Kernel)
 #git clone https://github.com/munch-devs/kernel_xiaomi_munch.git -b 16-ksu kernel/xiaomi/munch; \
 
 # Hardware Xiaomi
@@ -58,7 +60,6 @@ git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendo
 git clone https://github.com/cyberknight777/android_packages_apps_FastCharge packages/apps/FastCharge; \
 
 # Build
-
 rm -rf frameworks/base; \
 git clone https://github.com/Olzhas-Kdyr/frameworks_base.git -b 16 frameworks/base; \
 
