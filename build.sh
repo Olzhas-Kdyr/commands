@@ -26,6 +26,7 @@ rm -rf hardware/dolby; \
 rm -rf vendor/xiaomi/miuicamera; \
 rm -rf packages/resources/devicesettings; \
 rm -rf packages/apps/ViPER4AndroidFX; \
+rm -rf packages/apps/FastCharge; \
 
 # Clone new device specific repos
 
@@ -54,6 +55,9 @@ git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendo
 
 # ViPER4AndroidFX
 git clone https://github.com/Olzhas-Kdyr/ViPER4AndroidFX.git packages/apps/ViPER4AndroidFX; \
+
+# FastCharge
+git clone https://github.com/cyberknight777/android_packages_apps_FastCharge packages/apps/FastCharge; \
 
 # Build VANILLA build
 
