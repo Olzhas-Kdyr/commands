@@ -57,8 +57,8 @@ git clone https://github.com/Olzhas-Kdyr/android_packages_resources_devicesettin
 #git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera; \
 
 # Build
-#rm -rf frameworks/base; \
-#git clone https://github.com/Olzhas-Kdyr/fb -b 16 frameworks/base; \
+rm -rf frameworks/base; \
+git clone https://github.com/Olzhas-Kdyr/fb -b 16 frameworks/base; \
 #rm -rf packages/modules/Connectivity; \
 #git clone https://github.com/Olzhas-Kdyr/packages_modules_Connectivity.git -b 16 packages/modules/Connectivity; \
 
