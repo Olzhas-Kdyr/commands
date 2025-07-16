@@ -39,7 +39,7 @@ git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch.git -b infi
 #git clone https://github.com/Olzhas-Kdyr/android_vendor_xiaomi_munch -b 16 vendor/xiaomi/munch; \
 
 # Munch FW
-git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_munch-firmware vendor/xiaomi/munch-firmware; \
+#git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_munch-firmware vendor/xiaomi/munch-firmware; \
 
 # Kernel Tree (N0Kernel)
 #git clone https://github.com/munch-devs/kernel_xiaomi_munch.git -b 16-ksu kernel/xiaomi/munch; \
@@ -56,14 +56,11 @@ git clone https://github.com/Olzhas-Kdyr/android_packages_resources_devicesettin
 # MIUI Camera
 #git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera; \
 
-# FastCharge
-git clone https://github.com/cyberknight777/android_packages_apps_FastCharge packages/apps/FastCharge; \
-
 # Build
-rm -rf frameworks/base; \
-git clone https://github.com/Olzhas-Kdyr/fb -b 16 frameworks/base; \
-rm -rf packages/modules/Connectivity; \
-git clone https://github.com/Olzhas-Kdyr/packages_modules_Connectivity.git -b 16 packages/modules/Connectivity; \
+#rm -rf frameworks/base; \
+#git clone https://github.com/Olzhas-Kdyr/fb -b 16 frameworks/base; \
+#rm -rf packages/modules/Connectivity; \
+#git clone https://github.com/Olzhas-Kdyr/packages_modules_Connectivity.git -b 16 packages/modules/Connectivity; \
 
 . build/envsetup.sh; \
 lunch infinity_munch-user && m bacon
