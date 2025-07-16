@@ -60,8 +60,10 @@ git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendo
 git clone https://github.com/cyberknight777/android_packages_apps_FastCharge packages/apps/FastCharge; \
 
 # Build
-#rm -rf frameworks/base; \
-#git clone https://github.com/Olzhas-Kdyr/frameworks_base.git -b 16 frameworks/base; \
+rm -rf frameworks/base; \
+git clone https://github.com/Olzhas-Kdyr/fb -b 16 frameworks/base; \
+rm -rf packages/modules/Connectivity; \
+git clone https://github.com/Olzhas-Kdyr/packages_modules_Connectivity.git -b 16 packages/modules/Connectivity; \
 
 . build/envsetup.sh; \
 lunch infinity_munch-user && m bacon
