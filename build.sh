@@ -29,7 +29,6 @@ rm -rf hardware/dolby; \
 rm -rf vendor/xiaomi/miuicamera; \
 rm -rf packages/resources/devicesettings; \
 rm -rf packages/apps/ViPER4AndroidFX; \
-rm -rf packages/apps/FastCharge; \
 
 # Clone new device specific repos
 
@@ -40,10 +39,10 @@ git clone https://github.com/PocoF4Trees/device_xiaomi_munch.git -b 16 device/xi
 git clone https://github.com/PocoF4Trees/vendor_xiaomi_munch -b 16 vendor/xiaomi/munch; \
 
 # Munch FW
-git clone  vendor/xiaomi/munch-firmware; \
+git clone https://github.com/PocoF4Trees/vendor_xiaomi_munch-firmware vendor/xiaomi/munch-firmware; \
 
 # Kernel Tree (N0Kernel)
-git clone https://github.com/PocoF4Trees/kernel_xiaomi_munch -b munch-ksu kernel/xiaomi/munch; \
+git clone https://github.com/PocoF4Trees/kernel_xiaomi_munch kernel/xiaomi/munch; \
 
 # Hardware Xiaomi
 git clone https://github.com/PocoF4Trees/hardware_xiaomi -b 16 hardware/xiaomi; \
@@ -55,7 +54,7 @@ git clone https://github.com/PocoF4Trees/hardware_dolby hardware/dolby; \
 git clone https://github.com/PocoF4Trees/packages_resources_devicesettings packages/resources/devicesettings; \
 
 # MIUI Camera
-git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera; \
+git clone https://github.com/PocoF4Trees/vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera; \
 
 # Build
 #rm -rf frameworks/base; \
