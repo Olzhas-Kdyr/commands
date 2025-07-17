@@ -33,7 +33,7 @@ rm -rf device/xiaomi/munch; \
 # Clone new device specific repos
 
 # Deivce Tree
-git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch.git -b infinity device/xiaomi/munch; \
+git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch.git -b test device/xiaomi/munch; \
 
 # Vendor Tree
 #git clone https://github.com/Olzhas-Kdyr/android_vendor_xiaomi_munch -b 16 vendor/xiaomi/munch; \
