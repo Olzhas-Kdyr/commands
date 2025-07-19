@@ -7,10 +7,10 @@ rm -rf .repo/local_manifests; \
 #repo init -u https://github.com/PixelOS-AOSP/manifest.git -b sixteen --git-lfs; \
 #repo init -u https://github.com/LineageOS/android.git -b lineage-23.0 --git-lfs; \
 #repo init -u https://github.com/AxionAOSP/android.git -b lineage-23.0 --git-lfs; \
-#repo init -u https://github.com/Evolution-X/manifest -b bka --git-lfs; \
+repo init -u https://github.com/Evolution-X/manifest -b bka --git-lfs; \
 #repo init -u https://github.com/yaap/manifest.git -b sixteen --git-lfs; \
 #repo init --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b 16 -g default,-mips,-darwin,-notdefault; \
-repo init -u https://github.com/Lunaris-AOSP/android -b 16 --git-lfs; \
+#repo init -u https://github.com/Lunaris-AOSP/android -b 16 --git-lfs; \
 
 # Fix clang error
 rm -rf prebuilts/clang/host/linux-x86; \
@@ -63,4 +63,4 @@ git clone https://github.com/PocoF4Trees/vendor_xiaomi_miuicamera vendor/xiaomi/
 #git clone https://github.com/Olzhas-Kdyr/packages_modules_Connectivity.git -b 16 packages/modules/Connectivity; \
 
 . build/envsetup.sh; \
-lunch lineage_munch-bp2a-user && m lunaris
+lunch lineage_munch-bp2a-user && m evolution
