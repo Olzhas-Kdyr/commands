@@ -57,7 +57,7 @@ git clone https://github.com/PocoF4Trees/packages_resources_devicesettings packa
 git clone https://github.com/PocoF4Trees/vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera; \
 
 # ViPER4AndroidFX
-https://github.com/PocoF4Trees/packages_apps_ViPER4AndroidFX packages/apps/ViPER4AndroidFX; \
+git clone https://github.com/PocoF4Trees/packages_apps_ViPER4AndroidFX packages/apps/ViPER4AndroidFX; \
 
 # Build
 #rm -rf frameworks/base; \
