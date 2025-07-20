@@ -1,10 +1,10 @@
 # Remove local_manifests
 
-rm -rf .repo/local_manifests; \
+#rm -rf .repo/local_manifests; \
 
 # repo init
 
-repo init -u https://github.com/PixelOS-AOSP/manifest.git -b sixteen --git-lfs; \
+#repo init -u https://github.com/PixelOS-AOSP/manifest.git -b sixteen --git-lfs; \
 #repo init -u https://github.com/LineageOS/android.git -b lineage-23.0 --git-lfs; \
 #repo init -u https://github.com/AxionAOSP/android.git -b lineage-23.0 --git-lfs; \
 #repo init -u https://github.com/Evolution-X/manifest -b bka --git-lfs; \
@@ -13,15 +13,15 @@ repo init -u https://github.com/PixelOS-AOSP/manifest.git -b sixteen --git-lfs; 
 #repo init -u https://github.com/Lunaris-AOSP/android -b 16 --git-lfs; \
 
 # Fix clang error
-rm -rf prebuilts/clang/host/linux-x86; \
+#rm -rf prebuilts/clang/host/linux-x86; \
 
 # repo sync script
-/opt/crave/resync.sh; \
+#/opt/crave/resync.sh; \
 
 # Remove old device specific repos
 rm -rf out/target/product/munch; \
 rm -rf device/xiaomi/munch; \
-rm -rf kernel/xiaomi/munch; \
+#rm -rf kernel/xiaomi/munch; \
 rm -rf vendor/xiaomi/munch; \
 rm -rf vendor/xiaomi/munch-firmware; \
 rm -rf hardware/xiaomi; \
@@ -42,7 +42,7 @@ git clone https://github.com/PocoF4Trees/vendor_xiaomi_munch -b 16 vendor/xiaomi
 git clone https://github.com/PocoF4Trees/vendor_xiaomi_munch-firmware vendor/xiaomi/munch-firmware; \
 
 # Kernel Tree (N0Kernel)
-git clone https://github.com/PocoF4Trees/kernel_xiaomi_munch kernel/xiaomi/munch; \
+#git clone https://github.com/PocoF4Trees/kernel_xiaomi_munch kernel/xiaomi/munch; \
 
 # Hardware Xiaomi
 git clone https://github.com/PocoF4Trees/hardware_xiaomi -b 16 hardware/xiaomi; \
@@ -64,6 +64,9 @@ git clone https://github.com/PocoF4Trees/packages_apps_ViPER4AndroidFX packages/
 #git clone https://github.com/Olzhas-Kdyr/fb -b 16 frameworks/base; \
 #rm -rf packages/modules/Connectivity; \
 #git clone https://github.com/Olzhas-Kdyr/packages_modules_Connectivity.git -b 16 packages/modules/Connectivity; \
+
+rm -rf vendor/qcom/opensource/vibrator; \
+git clone https://github.com/Olzhas-Kdyr/vendor_qcom_opensource_vibrator.git -b lineage-23.0 vendor/qcom/opensource/vibrator; \
 
 . build/envsetup.sh; \
 lunch aosp_munch-bp2a-user && mka bacon
