@@ -8,7 +8,8 @@ rm -rf .repo/local_manifests; \
 
 #repo init --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b 15 -g default,-mips,-darwin,-notdefault; \
 #repo init -u https://github.com/alphadroid-project/manifest -b alpha-15.2 --git-lfs; \
-repo init -u https://github.com/RisingOS-Revived/android -b qpr2 --git-lfs; \
+#repo init -u https://github.com/RisingOS-Revived/android -b qpr2 --git-lfs; \
+repo init -u https://github.com/crdroidandroid/android.git -b 15.0 --git-lfs; \
 
 # Fix clang error
 rm -rf prebuilts/clang/host/linux-x86; \
@@ -32,44 +33,32 @@ rm -rf packages/apps/FastCharge; \
 
 # Deivce Tree
 
-git clone https://github.com/Olzhas-Kdyr/android_device_xiaomi_munch.git -b rising device/xiaomi/munch; \
+git clone https://github.com/PocoF4Trees/device_xiaomi_munch device/xiaomi/munch; \
 
 # Vendor Tree
-git clone https://github.com/Olzhas-Kdyr/android_vendor_xiaomi_munch.git vendor/xiaomi/munch; \
+git clone https://github.com/PocoF4Trees/vendor_xiaomi_munch vendor/xiaomi/munch; \
+
+# Firmware
+git clone https://github.com/PocoF4Trees/vendor_xiaomi_munch-firmware vendor/xiaomi/munch-firmware; \
 
 # Kernel Tree (N0Kernel)
 
-git clone https://github.com/Olzhas-Kdyr/kernel_xiaomi_sm8250 kernel/xiaomi/munch; \
+git clone https://github.com/PocoF4Trees/kernel_xiaomi_munch kernel/xiaomi/munch; \
 
 # Hardware Xiaomi
-git clone https://github.com/Olzhas-Kdyr/android_hardware_xiaomi.git -b bk hardware/xiaomi; \
+git clone https://github.com/PocoF4Trees/hardware_xiaomi -b bk hardware/xiaomi; \
 
 # Hardware Dolby
-git clone https://github.com/Olzhas-Kdyr/android_hardware_dolby.git hardware/dolby; \
+git clone https://github.com/PocoF4Trees/hardware_dolby hardware/dolby; \
 
 # DeviceSettings
-git clone https://github.com/PocoF3Releases/packages_resources_devicesettings packages/resources/devicesettings; \
+git clone https://github.com/PocoF4Trees/packages_resources_devicesettings packages/resources/devicesettings; \
 
 # MIUI Camera
-git clone https://codeberg.org/munch-devs/android_vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera; \
+git clone https://github.com/PocoF4Trees/vendor_xiaomi_miuicamera vendor/xiaomi/miuicamera; \
 
 # ViPER4AndroidFX
-git clone https://github.com/Olzhas-Kdyr/ViPER4AndroidFX.git packages/apps/ViPER4AndroidFX; \
-
-# FastCharge
-git clone https://github.com/cyberknight777/android_packages_apps_FastCharge packages/apps/FastCharge; \
-
-# Build VANILLA build
+git clone https://github.com/PocoF4Trees/packages_apps_ViPER4AndroidFX packages/apps/ViPER4AndroidFX; \
 
 . build/envsetup.sh; \
-#lunch alpha_munch-user && make bacon; \
-riseup munch user && rise b
-# Build GAPPS build
-
-#rm -rf out/target/product/vanilla out/target/product/gapps out/target/product/full_gapps; \
-#cd out/target/product && mv munch vanilla && cd ../../..; \
-#cd device/xiaomi/munch && rm -rf alpha_munch.mk && mv gapps.txt alpha_munch.mk && cd ../../..; \
-
-#. build/envsetup.sh; \
-#lunch alpha_munch-user && make bacon
-# End of script 
+lunch lineage_munch-bp1a-user && mka bacon
