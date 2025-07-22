@@ -6,11 +6,11 @@ rm -rf .repo/local_manifests; \
 
 #repo init -u https://github.com/PixelOS-AOSP/manifest.git -b sixteen --git-lfs; \
 #repo init -u https://github.com/LineageOS/android.git -b lineage-23.0 --git-lfs; \
-repo init -u https://github.com/AxionAOSP/android.git -b lineage-23.0 --git-lfs; \
+#repo init -u https://github.com/AxionAOSP/android.git -b lineage-23.0 --git-lfs; \
 #repo init -u https://github.com/Evolution-X/manifest -b bka --git-lfs; \
 #repo init -u https://github.com/yaap/manifest.git -b sixteen --git-lfs; \
 #repo init --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b 16 -g default,-mips,-darwin,-notdefault; \
-#repo init -u https://github.com/Lunaris-AOSP/android -b 16 --git-lfs; \
+repo init -u https://github.com/Lunaris-AOSP/android -b 16 --git-lfs; \
 
 # Fix clang error
 rm -rf prebuilts/clang/host/linux-x86; \
@@ -33,7 +33,7 @@ rm -rf packages/apps/ViPER4AndroidFX; \
 # Clone new device specific repos
 
 # Deivce Tree
-git clone https://github.com/PocoF4Trees/device_xiaomi_munch.git -b axion device/xiaomi/munch; \
+git clone https://github.com/PocoF4Trees/device_xiaomi_munch.git -b 16 device/xiaomi/munch; \
 
 # Vendor Tree
 git clone https://github.com/PocoF4Trees/vendor_xiaomi_munch -b 16 vendor/xiaomi/munch; \
@@ -69,4 +69,4 @@ git clone https://github.com/PocoF4Trees/packages_apps_ViPER4AndroidFX packages/
 #git clone https://github.com/Olzhas-Kdyr/vendor_qcom_opensource_vibrator.git -b lineage-23.0 vendor/qcom/opensource/vibrator; \
 
 . build/envsetup.sh; \
-lunch lineage_munch-bp2a-user && mka bacon
+lunch lineage_munch-bp2a-user && m lunaris
