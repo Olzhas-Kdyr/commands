@@ -21,7 +21,7 @@ rm -rf prebuilts/clang/host/linux-x86; \
 # Remove old device specific repos
 rm -rf out/target/product/munch; \
 rm -rf device/xiaomi/munch; \
-#rm -rf kernel/xiaomi/munch; \
+rm -rf kernel/xiaomi/munch; \
 rm -rf vendor/xiaomi/munch; \
 rm -rf vendor/xiaomi/munch-firmware; \
 rm -rf hardware/xiaomi; \
@@ -42,7 +42,7 @@ git clone https://github.com/PocoF4Trees/vendor_xiaomi_munch -b 16 vendor/xiaomi
 git clone https://github.com/PocoF4Trees/vendor_xiaomi_munch-firmware vendor/xiaomi/munch-firmware; \
 
 # Kernel Tree (N0Kernel)
-#git clone https://github.com/PocoF4Trees/kernel_xiaomi_munch kernel/xiaomi/munch; \
+git clone https://github.com/PocoF4Trees/kernel_xiaomi_munch kernel/xiaomi/munch; \
 
 # Hardware Xiaomi
 git clone https://github.com/PocoF4Trees/hardware_xiaomi -b 16 hardware/xiaomi; \
