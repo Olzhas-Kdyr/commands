@@ -68,5 +68,8 @@ git clone https://github.com/PocoF4Trees/packages_apps_ViPER4AndroidFX packages/
 #rm -rf vendor/qcom/opensource/vibrator; \
 #git clone https://github.com/Olzhas-Kdyr/vendor_qcom_opensource_vibrator.git -b lineage-23.0 vendor/qcom/opensource/vibrator; \
 
+rm -rf packages/apps/Settings; \
+git clone https://github.com/Olzhas-Kdyr/packages_apps_Settings.git packages/apps/Settings; \
+
 . build/envsetup.sh; \
 lunch lineage_munch-bp2a-user && m lunaris
