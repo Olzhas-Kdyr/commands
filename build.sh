@@ -33,7 +33,7 @@ rm -rf packages/apps/ViPER4AndroidFX
 # Clone new device specific repos
 
 # Deivce Tree
-git clone https://github.com/Olzhas-Kdyr/device_xiaomi_munch -b yaap device/xiaomi/munch
+git clone https://github.com/PocoF4Trees/device_xiaomi_munch -b yaap device/xiaomi/munch
 
 # Vendor Tree
 git clone https://github.com/PocoF4Trees/vendor_xiaomi_munch -b 16 vendor/xiaomi/munch
@@ -60,16 +60,8 @@ git clone https://github.com/PocoF4Trees/vendor_xiaomi_miuicamera vendor/xiaomi/
 git clone https://github.com/PocoF4Trees/packages_apps_ViPER4AndroidFX packages/apps/ViPER4AndroidFX
 
 # Build
-#rm -rf frameworks/base
-#git clone https://github.com/Olzhas-Kdyr/fb -b 16 frameworks/base
-#rm -rf packages/modules/Connectivity
-#git clone https://github.com/Olzhas-Kdyr/packages_modules_Connectivity.git -b 16 packages/modules/Connectivity
-
-#rm -rf vendor/qcom/opensource/vibrator
-#git clone https://github.com/Olzhas-Kdyr/vendor_qcom_opensource_vibrator.git -b lineage-23.0 vendor/qcom/opensource/vibrator
-
-#rm -rf packages/apps/Settings
-#git clone https://github.com/Olzhas-Kdyr/packages_apps_Settings.git packages/apps/Settings
+rm -rf device/qcom/common
+git clone https://github.com/Olzhas-Kdyr/device_qcom_common.git device/qcom/common
 
 . build/envsetup.sh
 lunch yaap_munch-user && m yaap
