@@ -19,15 +19,19 @@
 #/opt/crave/resync.sh
 
 # Remove old device specific repos
-#rm -rf device/xiaomi/munch
-#rm -rf kernel/xiaomi/munch
-#rm -rf vendor/xiaomi/munch
-#rm -rf vendor/xiaomi/munch-firmware
-#rm -rf hardware/xiaomi
-#rm -rf hardware/dolby
-#rm -rf vendor/xiaomi/miuicamera
-#rm -rf packages/resources/devicesettings
-#rm -rf packages/apps/ViPER4AndroidFX
+#mf=(
+#device/xiaomi
+#kernel/xiaomi
+#vendor/xiaomi
+#hardware/xiaomi
+#hardware/dolby
+#packages/resources/devicesettings
+#packages/apps/ViPER4AndroidFX
+#)
+
+#rm -rf "${mf[@]}"
+
+#echo "Old repositories has been removed"
 
 # Clone new device specific repos
 
@@ -65,4 +69,6 @@ rm -rf bionic
 git clone https://github.com/Olzhas-Kdyr/bionic-yaap.git bionic
 
 . build/envsetup.sh
-lunch yaap_munch-user && m yaap
+lunch yaap_munch-user
+echo "Starting build..."
+m yaap
