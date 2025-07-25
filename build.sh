@@ -70,5 +70,4 @@ git clone https://github.com/Olzhas-Kdyr/bionic-yaap.git bionic
 
 . build/envsetup.sh
 lunch yaap_munch-user
-echo "Starting build..."
 m yaap
