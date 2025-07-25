@@ -1,5 +1,3 @@
-# Remove local_manifests
-
 rm -rf .repo/local_manifests
 
 # repo init
@@ -12,9 +10,7 @@ repo init -u https://github.com/yaap/manifest.git -b sixteen --git-lfs
 #repo init --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b 16 -g default,-mips,-darwin,-notdefault
 #repo init -u https://github.com/Lunaris-AOSP/android -b 16 --git-lfs
 
-# Fix clang error
 rm -rf prebuilts/clang/host/linux-x86
-rm -rf bionic
 
 # repo sync script
 /opt/crave/resync.sh
@@ -32,10 +28,6 @@ packages/apps/ViPER4AndroidFX
 
 rm -rf "${mf[@]}"
 
-echo "Old repositories has been removed"
-
-# Clone new device specific repos
-
 # Deivce Tree
 git clone https://github.com/PocoF4Trees/device_xiaomi_munch -b yaap device/xiaomi/munch
 
@@ -45,7 +37,7 @@ git clone https://github.com/PocoF4Trees/vendor_xiaomi_munch -b 16 vendor/xiaomi
 # Munch FW
 git clone https://github.com/PocoF4Trees/vendor_xiaomi_munch-firmware vendor/xiaomi/munch-firmware
 
-# Kernel Tree (N0Kernel)
+# Kernel Tree
 git clone https://github.com/PocoF4Trees/kernel_xiaomi_munch -b yaap-munch kernel/xiaomi/munch
 
 # Hardware Xiaomi
